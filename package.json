@@ -1,0 +1,31 @@
+{
+  "name": "marvinwills",
+  "version": "1.0.0",
+  "description": "Practic project for SavvyCoders",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/neonPython/Marvin-wills.git"
+  },
+  "keywords": [
+    "html",
+    "css",
+    "js",
+    "spa"
+  ],
+  "author": "Marvin Wills",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/neonPython/Marvin-wills/issues"
+  },
+  "homepage": "https://github.com/neonPython/Marvin-wills#readme",
+  "devDependencies": {
+    "prettier": "^1.18.2",
+    "stylelint": "^10.1.0",
+    "stylelint-config-standard": "^18.3.0",
+    "stylelint-prettier": "^1.1.1"
+  }
+}
