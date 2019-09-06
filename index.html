@@ -2,7 +2,15 @@
 <html lang="en" class="gr_127_0_0_1">
 <head> </head>
 <body>
-  <header>
+  <header class="test-class" id="another test" >
+    <style>
+      h1::before{
+        content:'Sup bro';
+      }
+      .test-class{
+        background-color:indianred;
+      }
+    </style>
     <figure><img src="https://picsum.photos/200/300" alt=""></figure>
   </header>
   <figure>
@@ -13,17 +21,22 @@
 src="https://picsum.photos/600" alt="Lorem Picsum">
   </figure>
   <h1>Marvin's Portfolio Project </h1>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/0.5.0/modern-normalize.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.2/css/all.min.css">
+
   <nav>
     <ul>
       <li><a href="./index.html">Home</a></li>
       <li><a href="">About</a></li>
       <li><a href="">Gallery</a></li>
       <li><a href="">Blog</a></li>
+      <i class="fab fa-reddit-alien"></i>
     </ul>
   </nav>
   <main>
     <div>
-      <a href="#">Fake CTA Btn </a>
+      <a href="#">Fake`CTA`Btn</a>
     </div>
     <section>
       <h2>Some Fake Heading</h2>
@@ -41,13 +54,16 @@ src="https://picsum.photos/600" alt="Lorem Picsum">
       <a href="Read More"></a>
     </section>
     <footer>
+      <nav>
       <ul>
         <li><a href="./index.html">Home</a></li>
         <li><a href="">About</a></li>
         <li><a href="">Contact</a></li>
         <li><a href="">Blog</a></li>
       </ul>
+    </nav>
     </footer>
+
   </main>
 </body>
 
