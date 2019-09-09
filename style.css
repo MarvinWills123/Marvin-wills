@@ -1,0 +1,16 @@
+/*:root selector is basically same as 'html' in this context.*/
+:root{
+--primary: #ccc394;
+--secondary: #2b3768;
+--base-spacing: 8px;
+}
+
+main{
+  background: var(--secondary);
+
+}
+
+h1{
+  background-color: var(--secondary);
+font-family: 'Acme', sans-serif;
+font: var(--primary)}
