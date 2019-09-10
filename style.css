@@ -1,7 +1,9 @@
 /*:root selector is basically same as 'html' in this context.*/
 :root{
 --primary: #ccc394;
+--primary-variant:white;
 --secondary: #2b3768;
+--secondary-variant: black;
 --base-spacing: 8px;
 }
 
