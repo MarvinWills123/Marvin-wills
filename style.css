@@ -10,7 +10,30 @@ main{
 
 }
 
+body{
+  font-family: Arial, Helvetica, sans-serif;
+}
+
 h1{
   background-color: var(--secondary);
 font-family: 'Acme', sans-serif;
-font: var(--primary)}
+font: var(--primary);
+margin: calc(var(--base-spacing)*4);
+}
+
+header,
+section:nth-of-type(odd),
+footer {
+  background: var(--secondary);
+  color: var(--secondary-text);
+}
+
+nav,
+section:nth-of-type(even){
+  border-top: var(--border-secondary);
+  border-bottom: var(--border-secondary);
+}
+
+footer{
+  border-top: var(--border-primary);
+}
