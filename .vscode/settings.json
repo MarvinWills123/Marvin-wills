@@ -10,7 +10,7 @@
     "files.insertFinalNewline": true,
     "files.trimTrailingWhitespace": true,
     "workbench.enableExperiments": false,
-    "workbench.colorTheme": "Default Dark+",
+    "workbench.colorTheme": "Panda Syntax",
     "workbench.iconTheme": "vs-minimal",
     "workbench.view.alwaysShowHeaderActions": true,
     "terminal.integrated.fontFamily": "'Inconsolata', monospace",

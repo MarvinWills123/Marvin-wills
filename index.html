@@ -10,94 +10,7 @@
     <link href="https://fonts.googleapis.com/css?family=Acme&display=swap" rel="stylesheet">
     <link href="style.css" rel="stylesheet">
     <style>
-      :root{
---primary: #ccc394;
---secondary: #2b3768;
---base-spacing: 8px;
 
-header,
-section:nth-of-type(odd),
-footer{ background: var(--primary);
-    color:var(--primary-text);
-}
-
-nav{
-        border-top:var(--border-secondary);
-        border-bottom: var(--border-secondary);
-        min-height: 72px;
-      }
-
-footer {
-border-top:var(--border-primary);
- }
-}
-.fab{
-  font-size:24px;
-  color:black;
-}
-.fas{
-  font-size:2em;
-}
-nav .fas{
-  margin: var(--base-spacing);
-  transform: translateX(80vw);
-  position: absolute;
-}
-      main{
-        background-color:#2b3768;
-
-      }
-
-      header{
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-
-      }
-
-      figure,
-      h2{
-        margin: 0;
-      }
-
-      img{
-        border-radius: 50%;
-        align-content:center;
-        height: 200px;
-        width: 200px;
-
-      }
-
-      h1{
-        text-align:center;
-        color:#ccc394;
-      }
-
-
-      nav ul{
-        list-style-type:none;
-        align-content: center;
-        background-color: #2b3768;
-
-      }
-
-      nav li{
-        padding:var(--base-spacing) 0;
-      }
-
-      nav a{
-        text-decoration:none;
-      }
-
-      nav a:hover{
-        color:white;
-        background:#2b3768;
-      }
-
-      .is-hidden{
-        height:0;
-        font-size:0;
-      }
     </style>
 </head>
 <body>
@@ -115,7 +28,7 @@ nav .fas{
     </ul>
   </nav>
   <main>
-    <div>
+    <div class=hero>
       <a href="#">Fake`CTA`Btn</a>
     </div>
     <section>

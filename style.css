@@ -1,58 +1,97 @@
-/*:root selector is basically same as 'html' in this context.*/
-:root{
---primary: #ccc394;
---secondary: #2b3768;
---base-spacing: 8px;
+:root {
+  --primary: #ccc394;
+  --secondary: #2b3768;
+  --base-spacing: 8px;
 }
-
-main{
-  background: var(--secondary);
-
-}
-
-body{
-  font-family: Arial, Helvetica, sans-serif;
-}
-
-h1{
-  background-color: var(--secondary);
-font-family: 'Acme', sans-serif;
-font: var(--primary);
-margin: calc(var(--base-spacing)*4);
-}
-
 header,
 section:nth-of-type(odd),
 footer {
-  background: var(--secondary);
-  color: var(--secondary-text);
+  background: var(--primary);
+  color: var(--primary-text);
 }
 
-nav,
-section:nth-of-type(even){
+nav {
   border-top: var(--border-secondary);
   border-bottom: var(--border-secondary);
+  min-height: 72px;
 }
 
-footer{
+footer {
   border-top: var(--border-primary);
 }
 
-/* Layout*/
+.fab {
+  font-size: 24px;
+  color: black;
+}
+.fas {
+  font-size: 2em;
+}
+nav .fas {
+  margin: var(--base-spacing);
+  transform: translateX(80vw);
+  position: absolute;
+}
+main {
+  background-color: #2b3768;
+}
 
 header {
-display: flex;
-flex-direction: column;
-align-items: center;
+  background: #2b3768;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 figure,
-h1,
-h2{
+h2 {
   margin: 0;
 }
 
-img{
-  border-radius: calc(var(--base-spacing)*2) var(--base-spacing);
-  box-shadow: ;
+img {
+  border-radius: 50%;
+  align-content: center;
+  height: 200px;
+  width: 200px;
+}
+
+h1 {
+  text-align: center;
+  color: #ccc394;
+}
+
+nav ul {
+  list-style-type: none;
+  align-content: center;
+  background-color: #2b3768;
+}
+
+nav li {
+  padding: var(--base-spacing) 0;
+}
+
+nav a {
+  text-decoration: none;
+}
+
+nav a:hover {
+  color: white;
+  background: #2b3768;
+}
+
+.is-hidden {
+  height: 0;
+  font-size: 0;
+}
+
+.hero {
+  background: url(https://picsum.photos/680/420) center center no-repeat;
+  /*background-repeat:no-repeat;*/
+  /* background-size: contain; */
+  background-size: cover;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  height: 20vh;
+  max-height: 420px;
 }
