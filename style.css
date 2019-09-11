@@ -1,6 +1,10 @@
 :root {
   --primary: #ccc394;
   --secondary: #2b3768;
+  --primary-variant: white;
+  --secondary-variant: black;
+  --border-primary: 10px;
+  --border-secondary: 15px;
   --base-spacing: 8px;
 }
 header,
