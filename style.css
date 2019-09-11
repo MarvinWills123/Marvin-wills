@@ -6,7 +6,7 @@
 header,
 section:nth-of-type(odd),
 footer {
-  background: var(--primary);
+  background: var(--secondary);
   color: var(--primary-text);
 }
 
@@ -60,6 +60,10 @@ h1 {
   color: #ccc394;
 }
 
+h2{
+  color: aqua;
+}
+
 nav ul {
   list-style-type: none;
   align-content: center;
@@ -69,14 +73,42 @@ nav ul {
 nav li {
   padding: var(--base-spacing) 0;
 }
+footer ul{
+  /*By default, this will do flex-direction: row;*/
+  display:flex;
+  justify-content: space-between;
+}
 
-nav a {
+footer{
+  border-top:var(--border-primary);
+  padding:calc(var(--base-spacing)*2);
+}
+
+footer a{
+  color: white;
+}
+
+section{
+  padding:calc(var(--base-spacing)*2);
+}
+nav a,
+.hero a {
+  /*Remove Underline*/
   text-decoration: none;
 }
 
 nav a:hover {
   color: white;
   background: #2b3768;
+}
+
+footer a,
+nav a,
+.hero a,
+.read-more-btn {
+background-color: rgb(82, 255, 47);
+padding:var(--base-spacing);
+border-radius:var(--base-spacing);
 }
 
 .is-hidden {
