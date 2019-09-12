@@ -96,10 +96,12 @@ footer a{
 section{
   padding:calc(var(--base-spacing)*2);
 }
+
 nav a,
-.hero a {
+.hero a:hover {
   /*Remove Underline*/
   text-decoration: none;
+
 }
 
 nav a:hover {
@@ -116,9 +118,13 @@ padding:var(--base-spacing);
 border-radius:var(--base-spacing);
 }
 
-.read-more-btn{
-/*Remove Underline*/
+.read-more-btn {
 color:white;
+
+}
+
+.read-more-btn:hover{
+background: #2b3768;
 }
 
 .is-hidden {
