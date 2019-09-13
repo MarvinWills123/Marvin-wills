@@ -162,6 +162,10 @@ header {background:grey;}
 section{display:flex;
 flex-direction:column;}
 
+.hero{
+  height:40vh;
+}
+
 .is-hidden--tablet{
   font-size:0;
   height:0;
@@ -178,9 +182,23 @@ flex-direction:column;}
     margin-right:calc(var(--base-spacing)*2);
   }
 
-  nav li{
-    display:inline-block;
+  .section p{
+    margin-bottom: auto;
+}
+
+  nav ul{
+    display:flex;
+    justify-content:space-around;
   }
+
+
+.hero{
+  height:40vh;
+}
+
+.flex-container--desktop{
+  display:flex;
+}
 
   .is-hidden--desktop{
   font-size:0;
