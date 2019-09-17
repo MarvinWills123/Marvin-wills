@@ -224,11 +224,31 @@ flex-direction:column;}
 
 
 .hero{
-  height:40vh;
+  height:60vh;
 }
 
 .flex-container--desktop{
   display:flex;
+}
+
+.flex-row--desktop{
+flex-direction: row;
+}
+/*JavaScript CSS*/
+.is-error {
+border:2px solid red;
+box-shadow: 1px 1px 1px;
+}
+
+.is-success{
+border:2px solid rgb(6, 209, 6);
+box-shadow: 1px 1px 1px;
+}
+
+/*------*/
+
+#msg{
+  max-width: 550px;
 }
 
   .is-hidden--desktop{
