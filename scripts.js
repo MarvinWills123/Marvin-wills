@@ -10,3 +10,12 @@ document.querySelector('h1').textContent = greeter();
 //const h1 = document.querySelector("h1");
 //const textContent = h1.textContent
 
+answer = prompt(question);
+
+if (answer === ""){
+greeter(); //recursion
+
+
+}
+return answer;
+
