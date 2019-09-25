@@ -10,7 +10,10 @@
 }
 
 body{
-font-family: Arial, Helvetica, sans-serif;
+font: var(--secondary-variant);
+}
+title {
+font-family: Verdana cursive ;
 }
 
 header,

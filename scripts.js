@@ -1,21 +1,34 @@
 function greeter(question = "What's your name?"){
-  return prompt(question);
-}
+  let answer = prompt(question)
 
-const answer = greeter("What's your favorite scary movie?");
+
 console.log(answer);
 
+if (answer === ""){
+  return greeter(); //recursion
+}
 
-document.querySelector('h1').textContent = greeter();
+return answer;
+}
+document.querySelector('h1').textContent = greeter();{
 //const h1 = document.querySelector("h1");
 //const textContent = h1.textContent
 
 answer = prompt(question);
 
-if (answer === ""){
-greeter(); //recursion
+return answer;
+}
 
+const me= {
+  name: "Marvin",
+  age: "mentally 59"
 
 }
-return answer;
 
+//Getter
+const getter = me.name;
+
+console.log(getter);
+
+//Setter
+me.name= "Marvin"
