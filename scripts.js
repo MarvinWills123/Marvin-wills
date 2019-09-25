@@ -2,22 +2,22 @@ function greeter(question = "What's your name?"){
   let answer = prompt(question)
 
 
-console.log(answer);
-
 if (answer === ""){
   return greeter(); //recursion
 }
 
 return answer;
 }
+
 document.querySelector('h1').textContent = greeter();{
 //const h1 = document.querySelector("h1");
 //const textContent = h1.textContent
 
-answer = prompt(question);
+document.querySelector("#root").innerHTML="<p>" + greeter() + "</p>";
+document.querySelector("#root").innerHTML = `<p>${greeter()}</p>`
 
-return answer;
-}
+
+
 
 const me= {
   name: "Marvin",
