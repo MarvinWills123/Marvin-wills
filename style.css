@@ -37,8 +37,10 @@ footer {
   font-size: 24px;
   color: black;
 }
+
 .fas {
   font-size: 2em;
+  color: black;
 }
 nav .fas {
   margin: var(--base-spacing);
@@ -125,13 +127,19 @@ nav a:hover {
   background: #2b3768;
 }
 
+
 footer a,
-nav a,
 .hero a,
+nav a,
 .read-more-btn {
 background-color:#52ff2f;
 padding:var(--base-spacing);
 border-radius:var(--base-spacing);
+}
+
+nav .is-hidden--mobile a{
+padding: 0;
+
 }
 
 
@@ -197,6 +205,12 @@ section{
     display: flex;
     flex-direction: column;
 }
+
+nav a{
+  padding:var(--base-spacing);
+  display:flex;
+}
+
 
 .hero{
   height:40vh;
