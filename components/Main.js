@@ -1,6 +1,8 @@
-export default`<main>
-<div class=hero>
-  <a href="#">Fake`CTA`Btn</a>
+export default function(body)
+{ return `
+<main>
+<div ${body}class=hero>
+  <a href="#">Fake"CTA"Btn</a>
 </div>
 <div class="flex-container--desktop">
 <section>
@@ -19,20 +21,6 @@ export default`<main>
   <a href=""class="read-more-btn">Read More</a>
 </section>
 </div>
-<script src="./scripts.js"></script>
-<script src = "./index.js"></script>
-let x;
-console.log(x);
-
-const meNested={
-name: 'Marvin',
-dog: {
-name: 'none',
+</main>`;
 }
 
-}
-const k = "name";
-console.log(meNested.name);
-console.log(meNested['name']);
-</script>
-</main>`

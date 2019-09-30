@@ -1,4 +1,5 @@
-export default`<footer>
+export default function()
+{return ` <footer>
 <nav>
 <ul>
   <li><a href="../">Home</a></li>
@@ -9,4 +10,5 @@ export default`<footer>
 </ul>
 </nav>
 <p>&copy;2019 Marvin&Co &bullet;All Rights Reserved</p>
-</footer>`
+</footer>`;
+}

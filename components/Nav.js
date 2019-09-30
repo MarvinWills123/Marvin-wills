@@ -1,4 +1,5 @@
-export default` <nav>
+export default function()
+{return `<nav>
 <span class="fas fa-hamburger" class="is-hidden--desktop"></span>
 <ul class="is-hidden--mobile is-hidden--tablet is-shown--desktop">
   <li><a href="../">Home</a></li>
@@ -7,4 +8,5 @@ export default` <nav>
   <li><a href="../gallery/">Gallery</a></li>
   <li><a href="../blog/">Blog</a></li>
 </ul>
-</nav>`
+</nav>`;
+}
