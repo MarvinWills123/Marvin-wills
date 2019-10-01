@@ -1,4 +1,4 @@
-export default function()
+export default function( name = "Marvin")
 {return ` <footer>
 <nav>
 <ul>
@@ -9,6 +9,6 @@ export default function()
   <li><a href="../blog">Blog</a></li>
 </ul>
 </nav>
-<p>&copy;2019 Marvin&Co &bullet;All Rights Reserved</p>
+<p>&copy;2019 ${name} &bullet;All Rights Reserved</p>
 </footer>`;
 }

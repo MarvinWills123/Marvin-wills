@@ -1,6 +1,6 @@
-export default function(heading) {
+export default function(heading="SOMETHING EPIC...HOPEFULLY") {
   return `<header>
 <figure> <img src="https://picsum.photos/200"> </figure>
-<h1 class ='title'>${heading}SOMETHING EPIC...HOPEFULLY</h1>
+<h1 class ='title'>${heading}</h1>
 </header>`;
 }
