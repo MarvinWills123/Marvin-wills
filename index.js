@@ -5,7 +5,7 @@ import {Header, Nav, Main, Footer} from "./components";
 
 //What page is currently selected or being displayed.
 const state = {
-  Home : {
+  home : {
     heading: 'Home Page'
   },
   About : {
@@ -21,9 +21,24 @@ const state = {
 
 //currently,
 
+
+// The parameter "st" represents a piece of state.
+function render (st= state.home){
 document.querySelector("#root").innerHTML = `
-${Header(state.Home.heading)}
+${Header(st.heading)}
 ${Nav()}
 ${Main()}
 ${Footer()}
-`
+`;
+}
+
+render();
+
+const aboutLink = document.querySelector('#about');
+
+aboutLink.addEventListener('click', function(event) {
+  event.preventDefault();
+
+  // In this case we are accessing state.About
+  render(state[event.target.textContent]);
+})
