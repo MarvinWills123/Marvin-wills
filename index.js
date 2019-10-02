@@ -8,7 +8,7 @@ const state = {
   home : {
     heading: 'Home Page'
   },
-  About : {
+  about : {
     heading: 'About Page'
   }
 }
@@ -34,11 +34,14 @@ ${Footer()}
 
 render();
 
-const aboutLink = document.querySelector('#about');
+const links = document.querySelectorAll('nav a');
 
-aboutLink.addEventListener('click', function(event) {
+for (let i = 0; i < links.length; i += 1 ){
+  console.log(links[i].textContent);
+
+links[i].addEventListener('click', function(event) {
   event.preventDefault();
 
-  // In this case we are accessing state.About
-  render(state[event.target.textContent]);
+console.log(event.target.textContent);
 })
+}
