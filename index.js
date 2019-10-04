@@ -6,22 +6,27 @@ import {Header, Nav, Main, Footer} from "./components";
 //What page is currently selected or being displayed.
 const state = {
   home : {
-    heading: 'Home Page'
+    heading: 'Home Page',
+    links: ["Home", "About", "Contact", "Gallery", "Blog"]
   },
   about : {
-    heading: 'About Page'
+    heading: 'About Page',
+    links: ["Home", "About", "Contact", "Gallery", "Blog"]
   },
   contact : {
-    heading: 'Contact Page'
+    heading: 'Contact Page',
+    links: ["Home", "About", "Contact", "Gallery", "Blog"]
 },
   gallery : {
-    heading : 'Gallery Page'
+    heading : 'Gallery Page',
+    links: ["Home", "About", "Contact", "Gallery", "Blog"]
 
   },
   blog :  {
-    heading: 'Blog Page'
+    heading: 'Blog Page',
+    links: ["Home", "About", "Contact", "Gallery", "Blog"]
 
-  }
+  },
 }
 
 
@@ -37,23 +42,24 @@ const state = {
 function render (st= state.home){
 document.querySelector("#root").innerHTML = `
 ${Header(st.heading)}
-${Nav()}
-${Main()}
+${Nav(st)}
+${Main(st)}
 ${Footer()}
 `;
-
-render();
 }
 
-const links = document.querySelectorAll('nav a');
+
+render();
+
+
+const links = document.querySelectorAll("nav a");
 
 for (let i = 0; i < links.length; i += 1 ){
-  console.log(links[i].textContent);
 
 links[i].addEventListener('click', function(event) {
-  event.preventDefault();
+event.preventDefault();
 
 render(state[event.target.textContent.toLowerCase()]);
 
-
 })
+}
