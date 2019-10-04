@@ -1,12 +1,11 @@
 // Object Destructuring
 import {Header, Nav, Main, Footer} from "./components";
+import {Home, About, Contact, Gallery, Blog, Links} from "./store";
 
 //Use 'state' to render the appropriate heading depending on the state of the app
 
 //What page is currently selected or being displayed.
-const state = {
-    links: ["Home", "About", "Contact", "Gallery", "Blog"]
-};
+
 
 
 //import Header from "./components/Header";
@@ -18,11 +17,11 @@ const state = {
 
 
 // The parameter "st" represents a piece of state.
-function render (st= state.home){
+function render (st= Home){
 document.querySelector("#root").innerHTML = `
-${Header(st.heading)}
+${Header(st)}
 ${Nav(st)}
-${Main(st)}
+${Main()}
 ${Footer()}
 `;
 }
@@ -38,7 +37,7 @@ for (let i = 0; i < links.length; i += 1 ){
 links[i].addEventListener('click', function(event) {
 event.preventDefault();
 
-render(state[event.target.textContent.toLowerCase()]);
+render(event.target.textContent);
 
 })
 }
