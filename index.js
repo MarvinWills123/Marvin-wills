@@ -10,6 +10,17 @@ const state = {
   },
   about : {
     heading: 'About Page'
+  },
+  contact : {
+    heading: 'Contact Page'
+},
+  gallery : {
+    heading : 'Gallery Page'
+
+  },
+  blog :  {
+    heading: 'Blog Page'
+
   }
 }
 
@@ -30,9 +41,9 @@ ${Nav()}
 ${Main()}
 ${Footer()}
 `;
-}
 
 render();
+}
 
 const links = document.querySelectorAll('nav a');
 
@@ -42,6 +53,7 @@ for (let i = 0; i < links.length; i += 1 ){
 links[i].addEventListener('click', function(event) {
   event.preventDefault();
 
-console.log(event.target.textContent);
+render(state[event.target.textContent.toLowerCase()]);
+
+
 })
-}
