@@ -5,29 +5,8 @@ import {Header, Nav, Main, Footer} from "./components";
 
 //What page is currently selected or being displayed.
 const state = {
-  home : {
-    heading: 'Home Page',
     links: ["Home", "About", "Contact", "Gallery", "Blog"]
-  },
-  about : {
-    heading: 'About Page',
-    links: ["Home", "About", "Contact", "Gallery", "Blog"]
-  },
-  contact : {
-    heading: 'Contact Page',
-    links: ["Home", "About", "Contact", "Gallery", "Blog"]
-},
-  gallery : {
-    heading : 'Gallery Page',
-    links: ["Home", "About", "Contact", "Gallery", "Blog"]
-
-  },
-  blog :  {
-    heading: 'Blog Page',
-    links: ["Home", "About", "Contact", "Gallery", "Blog"]
-
-  },
-}
+};
 
 
 //import Header from "./components/Header";
