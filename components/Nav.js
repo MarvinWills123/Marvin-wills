@@ -1,3 +1,5 @@
+import {Links} from "../store";
+
 function linksBuilder(links) {
 /**
  * 1 Loop over the links
@@ -15,11 +17,11 @@ return linksHTML;
 }
 
 
-export default function(st)
+export default function()
 {return `<nav>
 <span class="fas fa-hamburger" class="is-hidden--desktop"></span>
 <ul class="is-hidden--mobile is-hidden--tablet is-shown--desktop">
-${linksBuilder(st.links)}
+${linksBuilder(Links)}
   </ul>
 </nav>`;
 }
