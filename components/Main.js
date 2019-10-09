@@ -1,5 +1,5 @@
-export default function(body)
-{ return `
+export default (body)=>
+ `
 <main>
 <div ${body}class=hero>
   <a href="#">Fake"CTA"Btn</a>
@@ -22,5 +22,5 @@ export default function(body)
 </section>
 </div>
 </main>`;
-}
+
 

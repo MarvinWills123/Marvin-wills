@@ -1,5 +1,5 @@
-export default function( name = "Marvin")
-{return ` <footer>
+export default (name) =>
+ ` <footer>
 <nav>
 <ul>
   <li><a href="../">Home</a></li>
@@ -11,4 +11,4 @@ export default function( name = "Marvin")
 </nav>
 <p>&copy;2019 ${name} &bullet;All Rights Reserved</p>
 </footer>`;
-}
+
