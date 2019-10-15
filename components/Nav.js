@@ -12,7 +12,7 @@ return links.map(link => `<li><a href = "./${link}">${link}</a></li>`).join("");
 
 export default function()
 {return `<nav>
-<span class="fas fa-hamburger" class="is-hidden--desktop"></span>
+<span class="fas fa-hamburger is-hidden--desktop"></span>
 <ul class="is-hidden--mobile is-hidden--tablet is-shown--desktop">
 ${linksBuilder(Links)}
   </ul>

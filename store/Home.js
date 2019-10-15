@@ -3,7 +3,7 @@ heading: 'Home Page',
 header:`<figure> <img src="https://picsum.photos/200"> </figure>
 <h1 class ='title'></h1>`,
 main:`<div class=hero>
-<a href="#">Fake"CTA"Btn</a>
+<a href="#" class="nav a">Fake"CTA"Btn</a>
 </div>
 <div class="flex-container--desktop">
 <section>
@@ -31,5 +31,5 @@ footer:`<nav>
   <li><a href="../blog">Blog</a></li>
 </ul>
 </nav>
-<p>&copy;2019 ${name} &bullet;All Rights Reserved</p>`
+<p>&copy;2019&bullet;All Rights Reserved</p>`
 };
