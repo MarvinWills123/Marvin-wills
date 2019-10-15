@@ -43,6 +43,11 @@ render(state[event.target.textContent]);
 
 render(state[location.pathname.slice(1)]);
 
+router
+//Developer's Note: ':page' can be whatever you want to name the key that comes into 'params' -Object Literal
+.on(":page", params => render(state[params.page]))
+.resolve();
+
 render();
 
 
