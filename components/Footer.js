@@ -1,4 +1,4 @@
-export default (name) =>
+export default (Marvin) =>
  ` <footer>
 <nav>
 <ul>
@@ -9,6 +9,6 @@ export default (name) =>
   <li><a href="../blog">Blog</a></li>
 </ul>
 </nav>
-<p>&copy;2019 ${name} &bullet;All Rights Reserved</p>
+<p>&copy;2019 ${Marvin} &bullet;All Rights Reserved</p>
 </footer>`;
 
