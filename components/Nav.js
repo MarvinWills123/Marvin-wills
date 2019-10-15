@@ -6,7 +6,7 @@ function linksBuilder(links) {
  * 2 Using a template literal,
  * build out the <li> markup
  */
-return links.map(link => `<li><a href = "./${link}">${link}</a></li>`).join("");
+return links.map(link => `<li><a href = "./${link}" data-navigo>${link}</a></li>`).join("");
 }
 
 

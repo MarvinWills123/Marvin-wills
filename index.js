@@ -33,18 +33,21 @@ ${Main(st)}
 ${Footer()}
 `;
 
-const links = document.querySelectorAll("nav a, footer a");
+router.updatePageLinks();
 
-links.foreach(link => link.addEventListener('click', event => {
-event.preventDefault();
+//const links = document.querySelectorAll("nav a, footer a");
 
-render(state[event.target.textContent]);
-}));}
+//links.foreach(link => link.addEventListener('click', event => {
+//event.preventDefault();
 
-render(state[location.pathname.slice(1)]);
+//render(state[event.target.textContent]);
+//}));
+}
+
 
 router
 //Developer's Note: ':page' can be whatever you want to name the key that comes into 'params' -Object Literal
+// TODO: Create a 404 page and route all "bad routes" to that page.
 .on(":page", params =>
 render(state[`${params.page.slice(0, 1).toUpperCase()}${params.page.slice(1).toLowerCase()}`])
 )
