@@ -57,8 +57,12 @@ render(state[`${params.page.slice(0, 1).toUpperCase()}${params.page.slice(1).toL
 
 axios
   .get("https://jsonplaceholder.typicode.com/posts")
-  .then(response => console.log(response.data)).catch(err => console.log(err));
+  .then(response => {
 
+state.Blog.main = response.data;
+console.log(state);
+
+  }).catch(err => console.log(err));
 
 
 render();
