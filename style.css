@@ -24,6 +24,7 @@ footer {
 }
 
 nav {
+
   border-top: var(--border-secondary);
   border-bottom: var(--border-secondary);
   min-height: 72px;

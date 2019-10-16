@@ -1,6 +1,6 @@
 export default {
   heading: 'Contact Page',
-  main:`<p>"Contact Us"</p>
+  main:`<p>"How can we help you?"</p>
   <form action="#" method="POST" data-netlify="true">
   <div class="flex-container--desktop flex-row--desktop">
   <div>

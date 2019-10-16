@@ -4,8 +4,8 @@
   "description": "Practice project for SavvyCoders",
   "main": "index.html",
   "scripts": {
-    "serve":"npx parcel index.html",
-    "build":"npx parcel build index.html && cp _redirects ./dist/"
+    "serve": "npx parcel index.html",
+    "build": "npx parcel build index.html && cp _redirects ./dist/"
   },
   "repository": {
     "type": "git",
@@ -32,6 +32,7 @@
     "stylelint-prettier": "^1.1.1"
   },
   "dependencies": {
+    "axios": "^0.19.0",
     "eslint-config-prettier": "^6.1.0",
     "eslint-plugin-prettier": "^3.1.0",
     "navigo": "^7.1.2",

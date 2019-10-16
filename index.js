@@ -4,6 +4,7 @@ import * as state from "./store";
 
 //The uppercase N indicates that it is a CONSTRUCTOR FUNCTION
 import Navigo from "navigo";
+import axios from "axios";
 
 const router = new Navigo(location.origin);
 
