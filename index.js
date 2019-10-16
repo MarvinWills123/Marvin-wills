@@ -54,6 +54,13 @@ render(state[`${params.page.slice(0, 1).toUpperCase()}${params.page.slice(1).toL
 )
 .on("/", render())
 .resolve();
+
+axios
+  .get("https://jsonplaceholder.typicode.com/posts")
+  .then(response => console.log(response.data)).catch(err => console.log(err));
+
+
+
 render();
 
 
