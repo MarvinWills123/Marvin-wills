@@ -7,18 +7,18 @@ main:`<div class=hero>
 </div>
 <div class="flex-container--desktop">
 <section>
-<h2>Education Benefits</h2>
-<p>My website should allow veterans to link to VA.gov to more easily apply for education benefits if they are eligible.</p>
+<h2>Psychology</h2>
+<p>I became interested in psychology when I was in highschool. I was my favorite subject. I'm currently a psychology major at SIUE.</p>
 <a href=""class="read-more-btn" style="max-width: 120px; align-self: center;">Read More</a>
 </section>
 <section>
-<h2>Volunteer</h2>
-<p>My website should allow individuals to volunteer to help veterans. Individuals can volunteer by helping veterans to attend medical appointments, training service dogs, building houses for injured veterans, and job training. </p>
+<h2>Traveling</h2>
+<p>I love to travel. Some of my favorite places I have visited are Austin,TX, Washington D.C., and Phoenix,AZ. I have never travelled abroad but I would love to visited London, Paris, and Cape Town. </p>
 <a href=""class="read-more-btn">Read More</a>
 </section>
 <section>
-<h2>Resume Builder</h2>
-<p> This website should incorporate a resume builder.</p>
+<h2>Food</h2>
+<p> One of my favorite things about traveling is trying different foods. My favorite type of food is Italian.</p>
 <a href=""class="read-more-btn">Read More</a>
 </section>
 </div>`,

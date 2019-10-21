@@ -52,17 +52,30 @@ router
 .on(":page", params =>
 render(state[`${params.page.slice(0, 1).toUpperCase()}${params.page.slice(1).toLowerCase()}`])
 )
-.on("/", render())
+.on("/", ()=> render ())
 .resolve();
+
 
 axios
   .get("https://jsonplaceholder.typicode.com/posts")
   .then(response => {
 
 state.Blog.main = response.data;
-console.log(state);
+const firstPost = response.data[0];
 
-  }).catch(err => console.log(err));
+
+const demoHTML = `
+<article>
+  <h2>${firstPost.title}</h2>
+  <p>${firstPost.body}</p>
+  </article>`
+
+  state.Blog.main = demoHTML;
+  console.log(state.Blog.main);
+  })
+
+  .catch(err => console.log(err));
+
 
 
 render();

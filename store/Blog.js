@@ -1,4 +1,5 @@
 export default {
   heading: 'Blog Page',
-  main:`<p>"Fetching Post.."</p>`
+  main:`<p>"Fetching Post.."</p>
+  `
 };

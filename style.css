@@ -16,6 +16,12 @@ title {
 font-family: Verdana cursive ;
 }
 
+section {
+display: flex;
+flex-direction: row ;
+width:33%;
+}
+
 header,
 section:nth-of-type(odd),
 footer {
