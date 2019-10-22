@@ -206,6 +206,27 @@ input[type="submit"]{
   background: #52ff2f
 }
 
+figure,
+img,
+video {
+  max-width: 100%;
+}
+
+new messages
+figcaption {
+  margin: var(--base-spacing) 0;
+  text-align: center;
+}
+.gallery {
+  display: flex;
+  flex-direction: column;
+  margin: var(--base-spacing) auto;
+  width: 80vw;
+}
+
+.gallery figure {
+  margin: var(--base-spacing) 0;
+}
 
 @media screen and (min-width:768px){
 header {background:grey;}
