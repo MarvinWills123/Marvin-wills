@@ -9,6 +9,7 @@ import axios from "axios";
 import {capitalize} from "lodash";
 
 import {auth, db} from "./firebase";
+import { format } from "path";
 
 
 const router = new Navigo(location.origin);
@@ -123,7 +124,11 @@ state.Blog.main = response.data.map(({title, body}) => `
   })
   .catch(err => console.error("Error loading pics", err));
 
+  //Admin
+ render(state.Admin);
 
-render();
+document.querySelector('form').addEventListener('submit', e=> {
+  e.preventDefault();
 
+})
 
