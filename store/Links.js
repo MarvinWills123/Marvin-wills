@@ -1,4 +1,9 @@
-export default
-  ["Home", "About", "Contact", "Gallery", "Blog"]
+export default[
+  "Home",
+  "About",
+  "Contact",
+  "Gallery",
+  "Blog"
+] ;
 
-;
+

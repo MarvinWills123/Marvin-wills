@@ -6,6 +6,8 @@ import * as state from "./store";
 import Navigo from "navigo";
 import axios from "axios";
 
+import {capitalize} from "lodash";
+
 const router = new Navigo(location.origin);
 
 
@@ -50,8 +52,9 @@ router
 //Developer's Note: ':page' can be whatever you want to name the key that comes into 'params' -Object Literal
 // TODO: Create a 404 page and route all "bad routes" to that page.
 .on(":page", params =>
-render(state[`${params.page.slice(0, 1).toUpperCase()}${params.page.slice(1).toLowerCase()}`])
-)
+render(state[
+  capitalize(params.page)]
+))
 .on("/", ()=> render ())
 .resolve();
 
@@ -59,19 +62,26 @@ render(state[`${params.page.slice(0, 1).toUpperCase()}${params.page.slice(1).toL
 axios
   .get("https://jsonplaceholder.typicode.com/posts")
   .then(response => {
-
-state.Blog.main = response.data;
-const firstPost = response.data[0];
-
-
-const demoHTML = `
+// response.data contains an ARRAY of 100 post objects
+state.Blog.main = response.data.map(({title, body}) => `
 <article>
-  <h2>${firstPost.title}</h2>
-  <p>${firstPost.body}</p>
-  </article>`
+<h2>${title}</h2>
+<p>${body}</p>
+</article>
+`).join("");
+ if (capitalize(router.lastRouteResolved().params.page) === "Blog"){
+   render(state.Blog)
+ }
+//const firstPost = response.data[0];
 
-  state.Blog.main = demoHTML;
-  console.log(state.Blog.main);
+
+//const demoHTML = `
+//<article>
+  //<h2>${firstPost.title}</h2>
+ // <p>${firstPost.body}</p>
+ // </article>`
+
+ // state.Blog.main = demoHTML;
   })
 
   .catch(err => console.log(err));
