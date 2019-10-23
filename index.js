@@ -81,16 +81,16 @@ state.Blog.main = response.data.map(({title, body}) => `
 
 //const demoHTML = `
 //<article>
-  //<h2>${firstPost.title}</h2>
- // <p>${firstPost.body}</p>
- // </article>`
+ //<h2>${firstPost.title}</h2>
+ //<p>${firstPost.body}</p>
+ //</article>`
 
- // state.Blog.main = demoHTML;
+ state.Blog.main = demoHTML;
   })
 
   .catch(err => console.log(err));
 
-  //Gallery
+ Gallery
   db.collection("pictures")
   .get()
 
@@ -124,11 +124,52 @@ state.Blog.main = response.data.map(({title, body}) => `
   })
   .catch(err => console.error("Error loading pics", err));
 
-  //Admin
- render(state.Admin);
+ //Admin
+// TODO: Rather than grabbing each element manually, consider using (`event.target.elements`) on the `submit` event.
+// Are we on Admin page?
+if (
+  router.lastRouteResolved().params &&
+  capitalize(router.lastRouteResolved().params.page) === "Admin"
+) {
+  // Are we logged in?
+  auth.onAuthStateChanged(user => {
+    console.log(user);
+    if (user) {
+      // We are logged in!
+      console.log("you are logged in!");
+      state.Admin.main = `<button type="button">Log out!</button>`;
 
-document.querySelector('form').addEventListener('submit', e=> {
-  e.preventDefault();
+      render(state.Admin);
 
-})
+      document.querySelector("button").addEventListener("click", () => {
+        auth
+          .signOut()
+          .then(() => {
+            state.Admin.main = `
+            <form>
+              <input type="email" />
+              <input type="password" />
+              <input type="submit" value="Log in!" />
+            </form>
+          `;
+
+          render(state.Admin);
+          })
+          .catch(err => console.log("Error signing out", err.message));
+      });
+    } else {
+      const email = document.querySelector('[type="email"]');
+      const password = document.querySelector('[type="password"]');
+
+      document.querySelector("form").addEventListener("submit", e => {
+        e.preventDefault();
+
+        auth
+          .signInWithEmailAndPassword(email.value, password.value)
+          .catch(err => console.error("Got an error", err.message));
+      });
+    }
+  });
+}
+
 

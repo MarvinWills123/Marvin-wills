@@ -6,5 +6,6 @@ export default {
       <input type="password"/>
       <input type="submit" value="Log in!"/>
     </form>
+
   `
 };
