@@ -136,7 +136,7 @@ if (
     console.log(user);
     if (user) {
       // We are logged in!
-      console.log("you are logged in!");
+      //Let's change our page display to show a 'logout' button
       state.Admin.main = `<button type="button">Log out!</button>`;
 
       render(state.Admin);
