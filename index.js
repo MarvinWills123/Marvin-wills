@@ -90,39 +90,58 @@ state.Blog.main = response.data.map(({title, body}) => `
 
   .catch(err => console.log(err));
 
- Gallery
-  db.collection("pictures")
-  .get()
+ //Gallery
+ db.collection("pictures")
+ .get()
+ .then(querySnapshots => {
 
-  /**
-   * Developer's Note: There is no straightforward way to get data back as an Array,
-   * so 'superpowers' are useless.😞
-   */
-  .then(querySnapshots => {
-    state.Gallery.main =
-      `<div class="gallery">` +
-      querySnapshots.docs
-        .map(doc => {
-          const { caption, credit, imgURL } = doc.data();
+   // Let's make sure to update instead of overwriting our markup
+   state.Gallery.main +=
+     `<div class="gallery">` +
+     querySnapshots.docs
+       .map(doc => {
+         // Combine `const` with destructuring to create 3 variables from the keys in our object literal
+         const { caption, credit, imgURL } = doc.data();
 
-          return `
-        <figure>
-          <img src="${imgURL}" alt="">
-          <figcaption>${caption} - ${credit}</figcaption>
-        </figure>
-      `;
-        })
-        .join(" ") +
-      `</div>`;
+         return `
+       <figure>
+         <img src="${imgURL}" alt="">
+         <figcaption>${caption} - ${credit}</figcaption>
+       </figure>
+     `;
+       })
+       .join(" ") +
+     `</div>`;
 
-    if (
-      router.lastRouteResolved().params &&
-      capitalize(router.lastRouteResolved().params.page) === "Gallery"
-    ) {
-      render(state.Gallery);
-    }
-  })
-  .catch(err => console.error("Error loading pics", err));
+   if (
+     router.lastRouteResolved().params &&
+     capitalize(router.lastRouteResolved().params.page) === "Gallery"
+   ) {
+     render(state.Gallery);
+
+     const imgURL = document.querySelector("#imgURL");
+     const caption = document.querySelector("#caption");
+     const credit = document.querySelector("#credit");
+
+     document.querySelector("form").addEventListener("submit", e => {
+       e.preventDefault();
+
+       db.collection("pictures")
+         .add({
+           imgURL: imgURL.value,
+           caption: caption.value,
+           credit: credit.value
+         })
+         .then(function(docRef) {
+           console.log("Document written with ID: ", docRef.id);
+         })
+         .catch(function(error) {
+           console.error("Error adding document: ", error);
+         });
+     });
+   }
+ })
+ .catch(err => console.error("Error loading pics", err));
 
  //Admin
 // TODO: Rather than grabbing each element manually, consider using (`event.target.elements`) on the `submit` event.
